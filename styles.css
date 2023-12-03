@@ -1,0 +1,119 @@
+:root {
+    /* Rich Reds and Earthy Tones */
+    --burgundy: #800020;
+    --terracotta: #E2725B;
+    --beige: #F5F5DC;
+    --beige-click: #cfcfbe;
+    --olive-green: #808000;
+
+    /* Cream and Dark Wood */
+    /* --cream: #FFFDD0;
+    --dark-wood: #5D432C;  Walnut Brown 
+    --accent-beige: #D3B88C; */
+
+    /* Charcoal and Gold Accents */
+    /* --charcoal-grey: #36454F;
+    --gold: #D4AF37;
+    --light-grey: #D3D3D3;  */
+
+    /* Navy Blue and Warm Whites */
+    /* --navy-blue: #000080;
+    --warm-white: #FDF4DC;
+    --balance-grey: #D3D3D3;  */
+
+    /* Green, Copper, and Ivory */
+    /* --green: #556B2F;
+    --copper: #B87333;
+    --ivory: #FFFFF0; */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.view{
+    display: grid;
+    grid-template-rows: 1.5fr 12fr 1fr;
+    height: 100vh;
+
+}
+.header{
+    width: 100vw;
+    position: relative;
+    text-align: center;
+}
+.bar{
+    display: flex;
+    background-color: var(--burgundy);
+    height: 100%;
+    
+}
+.title > h1{
+    color: white;
+}
+.title{
+    flex: 1;
+    padding: 25px;
+}
+.img-container > img{
+    width: 100px;
+    height: auto;
+    position: absolute;
+}
+
+.nav-buttons{
+    background-color: var(--beige);
+    border: none;
+    padding: 10px 25px;
+    box-shadow: 5px 5px #1b1b1b;
+    height: 40px;
+}
+.nav-buttons:hover{
+    height: 45px;
+}
+.nav-buttons:active{
+    background-color: var(--beige-click);
+}
+.nav{
+    display: flex;
+    gap: 55px;
+    position: absolute;
+    top:85%;
+    left: 50%; /* Move the left edge of the .nav to the center of the .header */
+    transform: translateX(-50%);
+}
+.body{
+    display: flex;
+    background-color: var(--olive-green);
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+    max-height: 80vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--terracotta);
+    width: 40%;
+    height: 70vh;
+    padding: 25px;
+}
+.block{
+    background-color: var(--copper);
+    flex: 1;
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    background-color: var(--burgundy);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+footer > div{
+    color:grey;
+
+}
