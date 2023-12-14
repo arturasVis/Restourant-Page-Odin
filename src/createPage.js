@@ -3,16 +3,23 @@ const createPage= () =>{
     const view=document.createElement('div');
 
     const header=document.createElement('div');
-    const nav=document.createElement('div');
+    const container=document.createElement('div');
     const bodyDiv=document.createElement('div');
+
     view.classList.add('view');
     header.classList.add('header');
-    nav.classList.add('nav');
+    container.classList.add('container');
     bodyDiv.classList.add('body');
+
+    bodyDiv.appendChild(container);
+
     body.appendChild(view);
     view.appendChild(header);
-    view.appendChild(nav);
     view.appendChild(bodyDiv);
 }
 
-export default createPage;
+function clearContainer(){
+    const container=document.querySelector('.container');
+    container.innerHTML="";
+}
+export {createPage,clearContainer};
