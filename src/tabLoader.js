@@ -1,5 +1,6 @@
-import { clearContainer } from "./createPage";
-import { homeLoad,clearHome } from "./homeScreenLoader";
+import { homeLoad } from "./homeScreenLoader";
+import { loadMenu } from "./menuLoader";
+import { loadAbout } from "./AboutLoader";
 
 function loadTabs(){
     const header=document.querySelector('.header');
@@ -16,10 +17,16 @@ function loadTabs(){
     aboutButton.innerHTML="About us";
 
     homeButton.addEventListener("click", (e) =>{
+        clear();
         homeLoad();
     })
     menuButton.addEventListener("click",(e) =>{
-        clearHome()
+        clear();
+        loadMenu();
+    })
+    aboutButton.addEventListener("click",(e) => {
+        clear();
+        loadAbout();
     })
 
     nav.classList.add('nav');
@@ -29,6 +36,11 @@ function loadTabs(){
     nav.appendChild(aboutButton);
 
     header.appendChild(nav);
+}
+function clear()
+{
+    const container=document.querySelector(".container");
+    container.innerHTML="";
 }
 
 
